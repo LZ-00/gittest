@@ -12,7 +12,7 @@ public class HelloGit {
         System.out.println("更新3");
         System.out.println("创建分支");
         System.out.println("主干分支");
-        System.out.println("更新本地库");
+        System.out.println("更新dao本地库");
     }
 
 }
