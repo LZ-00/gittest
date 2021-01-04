@@ -14,7 +14,6 @@ public class HelloGit {
         System.out.println("主干and分支");
         System.out.println("更新to本地库");
         System.out.println("test fetch");
-        System.out.println("更新");
     }
 
 }
