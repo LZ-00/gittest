@@ -9,11 +9,7 @@ public class HelloGit {
         System.out.println("hello Git~~~");
         System.out.println("更新1");
         System.out.println("更新2");
-        System.out.println("更新3");
-        System.out.println("创建分支");
-        System.out.println("主干and分支");
-        System.out.println("更新to本地库");
-        System.out.println("test fetch");
+      
     }
 
 }
