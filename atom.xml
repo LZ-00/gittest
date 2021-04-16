@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lz-00.github.io/blog</id>
-    <title>Gridea</title>
-    <updated>2021-04-16T04:10:04.497Z</updated>
+    <title>Blog</title>
+    <updated>2021-04-16T04:17:03.258Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lz-00.github.io/blog"/>
     <link rel="self" href="https://lz-00.github.io/blog/atom.xml"/>
     <subtitle>一起成长，一起记录</subtitle>
     <logo>https://lz-00.github.io/blog/images/avatar.png</logo>
     <icon>https://lz-00.github.io/blog/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, Blog</rights>
     <entry>
         <title type="html"><![CDATA[SpringBoot]]></title>
         <id>https://lz-00.github.io/blog/post/springboot/</id>
