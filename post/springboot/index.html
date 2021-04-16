@@ -155,18 +155,12 @@ window.onload=getCSS();
 		</div>
                   
 			<div class="wow slideInLeft entry-summary song">
-				<hr>
-<p>title: Spring Boot<br>
-date: 2020-09-04 15:48:18<br>
-tags: Spring技术栈<br>
-categories: 框架</p>
-<hr>
-<h2 id="一-spring-boot入门">一、Spring Boot入门</h2>
+				<p>一、Spring Boot入门</p>
 <h4 id="1springboot简介">1.SpringBoot简介</h4>
 <p>​	简化Spring应用开发的一个框架；</p>
 <p>​	整个Spring技术栈的一个大整合；</p>
 <p>​	J2EE开发的一站式解决方案</p>
-<img src="C:\Users\乐。\OneDrive\文档\有道云笔记\qq095E4186BB0C52B7F67283CEC83D7FF4\09ba66ecaee040388829d4e857831b8d\clipboard.png" alt="img" style="zoom:55%;" />
+<img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210416235807.png" alt="img" style="zoom:55%;" />
 <h4 id="2微服务">2.微服务、</h4>
 <p>​		2014，martin fowler</p>
 <p>​	微服务：架构风格（服务微化）</p>
@@ -257,7 +251,7 @@ public class HelloWorldMainApplication {
                                                        }
                                                       }
 </code></pre>
-<p>​	@<strong>SpringBootApplication</strong>：Spring Boot应用标注在某个类上说明该类是SpringBoot的主配置类，SpringBoot就会运行这个类的main方法来启动SpringBoot应用</p>
+<p>​	@<strong>SpringBootApplication</strong>：Spring Boot应用标注在某个类上说明该类是SpringBoot的主配置类，SpringBoot就应该运行这个类的main方法来启动SpringBoot应用</p>
 <pre><code class="language-java">@Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
@@ -806,13 +800,13 @@ public class HelloWorld {
     &lt;/dependency&gt;
 </code></pre>
 <p>底层依赖关系</p>
-<figure data-type="image" tabindex="2"><img src="C:%5CUsers%5C%E4%B9%90%E3%80%82%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1594550052649.png" alt="1594550052649" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210416235832.png" alt="1594550052649" loading="lazy"></figure>
 <p>总结：</p>
 <p>​	1）、SpringBoot底层使用slf4j+logback的方式进行日志记录</p>
 <p>​	2）、Spring Boot把其他的日志都替换成了slf4j</p>
 <p>​	3）、如果我们要引入其他框架，一定要把这个框架的默认日志依赖移除掉</p>
 <p>​	Spring框架使用的是commons-logging;</p>
-<figure data-type="image" tabindex="3"><img src="C:%5CUsers%5C%E4%B9%90%E3%80%82%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1594550560519.png" alt="1594550560519" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210416235833.png" alt="1594550560519" loading="lazy"></figure>
 <p>Spring Boot能自动适配所有的日志框架，而且底层使用sl4j+logback的方式记录日志，引入其他框架时，只需将该框架依赖的日志移除</p>
 <h4 id="4-日志的使用">4、日志的使用</h4>
 <h5 id="1-默认设置">1、默认设置</h5>
@@ -1781,7 +1775,7 @@ public EmbeddedServletContainer getEmbeddedServletContainer(
 <p>Spring的web模块里面有这个文件：<strong>org.springframework.web.SpringServletContainerInitializer</strong></p>
 <p>3）、SpringServletContainerInitializer将@HandlesTypes(WebApplicationInitializer.class)标注的所有这个类型的类都传入到onStartup方法的Set&lt;Class&lt;?&gt;&gt;；为这些WebApplicationInitializer类型的类创建实例；</p>
 <p>4）、每一个WebApplicationInitializer都调用自己的onStartup；</p>
-<p>![](D:/笔记/Typora/Spring Boot 笔记+课件/images/搜狗截图20180302221835.png)</p>
+<figure data-type="image" tabindex="6"><img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210416235834.png" alt="" loading="lazy"></figure>
 <p>5）、相当于我们的SpringBootServletInitializer的类会被创建对象，并执行onStartup方法</p>
 <p>6）、SpringBootServletInitializer实例执行onStartup的时候会createRootApplicationContext；创建容器</p>
 <pre><code class="language-java">protected WebApplicationContext createRootApplicationContext(
@@ -1866,15 +1860,15 @@ public EmbeddedServletContainer getEmbeddedServletContainer(
 <p><strong>Docker</strong>是一个开源的应用容器引擎；是一个轻量级容器技术；</p>
 <p>Docker支持将软件编译成一个镜像；然后在镜像中各种软件做好配置，将镜像发布出去，其他使用者可以直接使用这个镜像；</p>
 <p>运行中的这个镜像称为容器，容器启动是非常快速的。</p>
-<p>![](D:/笔记/Typora/Spring Boot 笔记+课件/images/搜狗截图20180303145450.png)</p>
-<p>![](D:/笔记/Typora/Spring Boot 笔记+课件/images/搜狗截图20180303145531.png)</p>
+<figure data-type="image" tabindex="7"><img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210416235835.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210416235836.png" alt="" loading="lazy"></figure>
 <h4 id="2-核心概念">2、核心概念</h4>
 <p>docker主机(Host)：安装了Docker程序的机器（Docker直接安装在操作系统之上）；</p>
 <p>docker客户端(Client)：连接docker主机进行操作；</p>
 <p>docker仓库(Registry)：用来保存各种打包好的软件镜像；</p>
 <p>docker镜像(Images)：软件打包好的镜像；放在docker仓库中；</p>
 <p>docker容器(Container)：镜像启动后的实例称为一个容器；容器是独立运行的一个或一组应用</p>
-<p>![](D:/笔记/Typora/Spring Boot 笔记+课件/images/搜狗截图20180303165113.png)</p>
+<figure data-type="image" tabindex="9"><img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210416235837.png" alt="" loading="lazy"></figure>
 <p>使用Docker的步骤：</p>
 <p>1）、安装Docker</p>
 <p>2）、去Docker仓库找到这个软件对应的镜像；</p>
@@ -2074,13 +2068,13 @@ public class DruidConfig {
 
 </code></pre>
 <h4 id="3-整合mybatis">3、整合Mybatis</h4>
-<figure data-type="image" tabindex="6"><img src="D:%5C%E7%AC%94%E8%AE%B0%5CTypora%5Cviews%5C1594871951150.png" alt="1594871951150" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="D:%5C%E7%AC%94%E8%AE%B0%5CTypora%5Cviews%5C1594871951150.png" alt="1594871951150" loading="lazy"></figure>
 <p>配置文件版</p>
 <pre><code class="language-properties">mybatis.config-location=classpath:mybatis/mybatis-config.xml
 mybatis.mapper-locations=classpath:mybatis/mapper/*Mapper.xml
 mybatis.type-aliases-package=com.example.springboot.bean
 </code></pre>
-<img src="C:\Users\乐。\AppData\Roaming\Typora\typora-user-images\1594882132606.png" alt="1594882132606" style="zoom: 50%;" />
+<img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210416235838.png" alt="1594882132606" style="zoom: 50%;" />
 <h4 id="4-整合springdata-jpa">4、整合SpringData JPA</h4>
 <h5 id="1-简介-3">1）、简介<img src="D:%5C%E7%AC%94%E8%AE%B0%5CTypora%5Cviews%5C1594882320276.png" alt="1594882320276" loading="lazy"></h5>
 <h5 id="2-整合springdatajpa">2）、整合SpringDataJPA</h5>
@@ -2149,8 +2143,8 @@ private void initialize(Object[] sources) {
     this.mainApplicationClass = deduceMainApplicationClass();
 }
 </code></pre>
-<p>![](D:/笔记/Typora/Spring Boot 笔记+课件/images/搜狗截图20180306145727.png)</p>
-<p>![](D:/笔记/Typora/Spring Boot 笔记+课件/images/搜狗截图20180306145855.png)</p>
+<figure data-type="image" tabindex="11"><img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210416235839.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210416235840.png" alt="" loading="lazy"></figure>
 <h4 id="2-运行run方法">2）、运行run方法</h4>
 <pre><code class="language-java">public ConfigurableApplicationContext run(String... args) {
         StopWatch stopWatch = new StopWatch();
