@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://lz-00.github.io/gittest</id>
+    <id>https://lz-00.github.io/blog</id>
     <title>Gridea</title>
-    <updated>2021-04-16T02:20:57.794Z</updated>
+    <updated>2021-04-16T02:33:25.508Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://lz-00.github.io/gittest"/>
-    <link rel="self" href="https://lz-00.github.io/gittest/atom.xml"/>
+    <link rel="alternate" href="https://lz-00.github.io/blog"/>
+    <link rel="self" href="https://lz-00.github.io/blog/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://lz-00.github.io/gittest/images/avatar.png</logo>
-    <icon>https://lz-00.github.io/gittest/favicon.ico</icon>
+    <logo>https://lz-00.github.io/blog/images/avatar.png</logo>
+    <icon>https://lz-00.github.io/blog/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
     <entry>
         <title type="html"><![CDATA[SpringBoot]]></title>
-        <id>https://lz-00.github.io/gittest/post/springboot/</id>
-        <link href="https://lz-00.github.io/gittest/post/springboot/">
+        <id>https://lz-00.github.io/blog/post/springboot/</id>
+        <link href="https://lz-00.github.io/blog/post/springboot/">
         </link>
         <updated>2021-04-15T16:24:05.000Z</updated>
         <content type="html"><![CDATA[<hr>
@@ -2144,8 +2144,8 @@ public class HelloCommandLineRunner implements CommandLineRunner {
     </entry>
     <entry>
         <title type="html"><![CDATA[test]]></title>
-        <id>https://lz-00.github.io/gittest/post/test/</id>
-        <link href="https://lz-00.github.io/gittest/post/test/">
+        <id>https://lz-00.github.io/blog/post/test/</id>
+        <link href="https://lz-00.github.io/blog/post/test/">
         </link>
         <updated>2021-04-15T16:08:47.000Z</updated>
         <content type="html"><![CDATA[<p>Demo</p>
@@ -2153,8 +2153,8 @@ public class HelloCommandLineRunner implements CommandLineRunner {
     </entry>
     <entry>
         <title type="html"><![CDATA[Demo]]></title>
-        <id>https://lz-00.github.io/gittest/post/demo/</id>
-        <link href="https://lz-00.github.io/gittest/post/demo/">
+        <id>https://lz-00.github.io/blog/post/demo/</id>
+        <link href="https://lz-00.github.io/blog/post/demo/">
         </link>
         <updated>2021-04-15T16:08:10.000Z</updated>
         <content type="html"><![CDATA[<p>Test</p>
@@ -2162,8 +2162,8 @@ public class HelloCommandLineRunner implements CommandLineRunner {
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://lz-00.github.io/gittest/post/hello-gridea/</id>
-        <link href="https://lz-00.github.io/gittest/post/hello-gridea/">
+        <id>https://lz-00.github.io/blog/post/hello-gridea/</id>
+        <link href="https://lz-00.github.io/blog/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
