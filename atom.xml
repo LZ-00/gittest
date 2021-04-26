@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lz-00.github.io/blog</id>
     <title>Blog</title>
-    <updated>2021-04-17T09:36:39.859Z</updated>
+    <updated>2021-04-26T04:37:32.287Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lz-00.github.io/blog"/>
     <link rel="self" href="https://lz-00.github.io/blog/atom.xml"/>
@@ -10,6 +10,522 @@
     <logo>https://lz-00.github.io/blog/images/avatar.png</logo>
     <icon>https://lz-00.github.io/blog/favicon.ico</icon>
     <rights>All rights reserved 2021, Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[EP2-知识点]]></title>
+        <id>https://lz-00.github.io/blog/post/ep2-zhi-shi-dian/</id>
+        <link href="https://lz-00.github.io/blog/post/ep2-zhi-shi-dian/">
+        </link>
+        <updated>2021-04-26T04:35:39.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="传统网络">传统网络</h1>
+<h2 id="物理层">物理层</h2>
+<h2 id="数据链路层">数据链路层</h2>
+<ol>
+<li>ARP的请求报文是广播报文，应答报文是一对一的（单播）。</li>
+<li>封装ARP报文的以太网帧类型字段应为：0x0806。</li>
+</ol>
+<h2 id="网络层">网络层</h2>
+<ol>
+<li>RIPv2报文为组播报文，组播地址为224.0.0.9。</li>
+<li>能隔离广播域的网元设备是路由器。</li>
+</ol>
+<h2 id="运输层">运输层</h2>
+<ol>
+<li>TCP协议保证所传送的信息是正确的，IP协议负责信息的实际传送。</li>
+<li>UDP报文头部的字段包括：源端口号、目标端口号、数据报长度和校验值。</li>
+</ol>
+<h2 id="应用层">应用层</h2>
+<ol>
+<li>
+<p>FTP服务一般运行在20和21两个端口。端口<strong>20</strong>用于在客户端和服务器之间<strong>传输数据流</strong>，而端口<strong>21</strong>用于<strong>传输控制流</strong>，并且是命令通向ftp服务器的进口。</p>
+</li>
+<li>
+<p>TFTP协议是基于UDP协议的。它的端口号是<strong>69</strong>。</p>
+</li>
+<li>
+<p>RIP协议是用UDP协议来封装的。</p>
+</li>
+<li>
+<p><strong>DNS</strong>默认端口号为<strong>53</strong>。</p>
+</li>
+</ol>
+<h1 id="云网络">云网络</h1>
+<h2 id="sdn">SDN</h2>
+<ol>
+<li>
+<p>OpoenDaylight使用Java编写</p>
+</li>
+<li>
+<p>Scapy使用Python编写</p>
+</li>
+<li>
+<p>ONOS与 OpenDaylight是SDN模型中的控制器。</p>
+</li>
+<li>
+<p>SDN交换机基于流表实现转发。</p>
+</li>
+<li>
+<p>OpenFlow协议是基于TCP协议</p>
+</li>
+<li>
+<p>ONOS的核心功能包括分布式核心平台、北向接口抽象层/APIs、南向接口抽象层/APIs、软件模块化。</p>
+</li>
+<li>
+<p><strong>OVSDB协议</strong>对应的侦听端口是<strong>6640</strong>.</p>
+</li>
+<li>
+<p>当<strong>iPerf</strong>不指定-p时，服务器端使用的或客户端所连接的默认端口是<strong>5001</strong>。</p>
+</li>
+<li>
+<p>sFlow Collector安装启动后的默认监听端口是<strong>6343</strong>。</p>
+</li>
+<li>
+<p>OpenDaylight默认启动的监听端口号是<strong>6633</strong>。</p>
+</li>
+<li>
+<p>Netperf默认使用TCP传输层协议。</p>
+</li>
+<li>
+<p>通过Hello消息协商双方的OpenFlow版本号。</p>
+</li>
+<li>
+<p>组类型：指定组的动作，分为all、select、indirect、fast failover四种。</p>
+</li>
+<li>
+<p>OpenFlow交换机由流表、安全通道和OpenFlow协议三部分组成。</p>
+</li>
+<li>
+<p>OpenFlow网络由OpenFlow交换机、网络虚拟化层和控制器三部分组成。</p>
+</li>
+<li>
+<p>在OpenFlow v1.3流表处理过程中，多个flow tables是依次排列的，序号从0开始。</p>
+</li>
+<li>
+<p>OF1.3协议中的交换机含有多个流表，每个流表中含有多个流表项，每个流表项包含多个匹配项及对应的指令。</p>
+</li>
+<li>
+<p><strong>idle_time</strong>和<strong>hard_time</strong>给出了该流表项的生存时间，其中idle_time表示当这条流表项在这段时间内没有匹配到数据分组，则该流表项失效，hard_time表示自流表项下发后只要过了这段时间即刻失效；两者同时设置时，以先到的生存时间为准；两者同时为0时，流表项不会自动失效。</p>
+</li>
+<li>
+<p>流表由很多个流表项组成，每个流表项就是一个转发规则。</p>
+</li>
+<li>
+<p>流表项由3个基本要素组成：<strong>头字段、计数器和行动。</strong></p>
+</li>
+<li>
+<p>利用CAR进行流量控制的处理：</p>
+<ul>
+<li>根据预先设置的匹配规则来对报文进行分类，如果是没有规定流量特性的报文，就直接继续发送，并不需要经过令牌桶的处理。</li>
+</ul>
+</li>
+<li>
+<p>ovs-vsctl list sflow可以查看已经配置的 sFlow Agent信息。</p>
+</li>
+<li>
+<p>odl-netconf-connector-all不是安装L2Switch项目必需的组件。</p>
+</li>
+<li>
+<p>PCEP使用TCP传输机制，TCP端口号为<strong>4189</strong></p>
+</li>
+<li>
+<p>单点对单点的intents：在外部路由器和SDN BGP  Speakers之间建立BGP对等会话使用单向intents。每个intents在SDN网络中连接两个连接点。每个连接点包含以下信息：SDN交换机的DPID、交换机Port和连接的BGP Speaker路由器的MAC地址。</p>
+</li>
+<li>
+<p>Ganglia监控工具监控粒度为1分钟。</p>
+</li>
+<li>
+<p>QoS是网络的一种安全机制，是用来解决网络延迟和阻塞等问题的一种技术。</p>
+</li>
+<li>
+<p>当IPv4被作为GRE有效载荷传输时，<strong>协议类型字段</strong>被设置为<strong>0x0800</strong>。</p>
+</li>
+<li>
+<p><strong>Scapy</strong>的命令：</p>
+<ul>
+<li>lsc()：查看scapy支持的所有的命令。</li>
+<li>send：在第三层即网络层发送数据包，但没有接收功能。</li>
+<li>sendp：在第二层即数据链路层发送数据包，同样没有接收功能。</li>
+</ul>
+</li>
+<li>
+<p>L2 Switch项目包含的服务包括地址跟踪、ARP处理器、主机跟踪、消除环路、包处理以及流表下发（主服务）等。</p>
+</li>
+<li>
+<p>OpenFlow流表的包头域，用于对交换机接收到的数据包的包头内容进行匹配。流表的包头域中包括了12个元组，不包括out_port。</p>
+</li>
+<li>
+<p>可以通过Packet-in/Packet-out发现交换机之间的链路</p>
+</li>
+<li>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210424170820.png" alt="img" loading="lazy"></figure>
+<ul>
+<li>SDN控制器构造PacketOut消息向S3的所有端口分别发送LLDP数据包。</li>
+<li>控制器向交换机S3中下发流表，流表规则为：将从Controller端口收到的LLDP数据包从他的对应端口发送出去。</li>
+<li>控制器向交换机S4中下发流表，流表规则为：将从非Controller接收到LLDP数据包发送给控制器。</li>
+<li>通过以上三步，控制器只能发现h1与h2之间的单向链路。\</li>
+</ul>
+</li>
+<li>
+<p>OpenDaylight采用了MD-SAL作为控制器平台服务层和南向接口及协议插件层的中间适配层，以实现北向接口与南向接口的解耦，保证南北向接口独立发展，互不影响。</p>
+</li>
+<li>
+<p>OVSDB子项目主要包含Northbound模块、Plugin模块和OVSDB  Library模块，其中北向Northbound模块可供外部APP调用，Plugin模块主要包含api、impl、internal和error等程序包，其中api程序包主要提供OVSDB的连接、增删改查等服务，impl包中的类是其接口的实现。南向OVSDB Library通过OVSDB协议与外部通信，进行OVSDB的管理。</p>
+</li>
+<li>
+<p>VXLAN网络理论上支持多达16M（即：2^24-1）的租户隔离。</p>
+</li>
+<li>
+<p>OpenFlow主要有3种类型的消息，分别是Controller-to-Switch、Asynchronous（异步）和Symmetric（对称）</p>
+<ul>
+<li>Controller-to-Switch包括Features 、Configuration 、Modify-State 、Read-Stats 、Send-Packet和Barrier</li>
+<li>异步包括Error 、Packet-in 、Flow-Removed和Port-Status</li>
+<li>对称包括Hello 、Echo 和Vendor</li>
+</ul>
+</li>
+<li>
+<p>斯坦福大学的Nick McKeown教授和Scott Shenker教授以及Martin Casado博士在硅谷一起创办了Nicira Networks公司，这是SDN历史上第一个初创公司，也是SDN从学术圈走向工业界的标志。</p>
+</li>
+<li>
+<p>P4协议支持可编程数据平面。OPenFlow协议不支持</p>
+</li>
+<li>
+<p>addLink()语法可以设置带宽bw、延迟delay、最大队列的大小max_queue_size、损耗率loss。addHost()语法可以对主机CPU以百分数的形式进行设置。</p>
+</li>
+<li>
+<p>Mininet中--switch参数默认使用ovsk交换机。</p>
+</li>
+<li>
+<p>OpenFlow（OF）被认为是第一个软件定义网络（SDN）标准。它最初在SDN环境中定义了通信协议，使SDN控制器能够与物理和虚拟的交换机和路由器等网络设备的转发平面直接进行交互，从而更好地适应不断变化的业务需求。</p>
+</li>
+<li>
+<p>Pipeline是OpenFlow交换机中实现matcing、forwarding和packet修改的flow table流水线。</p>
+</li>
+<li>
+<p>计量表项由计量表项ID、计量带、计数器三个要素构成。</p>
+</li>
+<li>
+<p>OpenFlow交换机定义了三种类型的OpenFlow Ports：physical ports（物理端口）、logical ports（逻辑端口）和reserved ports（预留端口），统称为标准端口。</p>
+</li>
+<li>
+<p>P4的目标是成为协议无关性（Protocol Independent）、目标无关性（Target Independent）、现场可重配置（Field Reconfigurable）的语言。</p>
+</li>
+<li>
+<p>在AD-SAL中，南北向API是1：1的对应关系，同一API无法被复用。所有南北向Plugin的功能都需要定义相应的AD-SAL API来承载，造成AD-SAL模块会更加庞大、实现更为复杂、维护困难性增加。</p>
+</li>
+<li>
+<p>L2Switch项目包含以下几个部分：Packet Handler 、Loop Remover 、Arp Handler 、Address Tracker、Host Tracker、L2 Switch Main</p>
+</li>
+<li>
+<p>NETCONF中定义了三种消息类型，分别是hello， rpc和rpc-reply, notification。</p>
+</li>
+</ol>
+<h2 id="云网络-2">云网络</h2>
+<ol>
+<li>Linux的磁盘分区包括主分区、逻辑分区、扩展分区和交换分区。</li>
+</ol>
+<h2 id="云存储">云存储</h2>
+<ol>
+<li>
+<p>Bigtable由客户端程序库、一个主服务器和多个子表服务器组成。</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210425122417.png" alt="Bigtable架构图" loading="lazy"></figure>
+</li>
+<li></li>
+</ol>
+<h2 id="云平台">云平台</h2>
+<ol>
+<li>OpenStack高可用架构通常有3个控制节点。</li>
+<li>Keystone是 OpenStack 框架中负责管理身份验证、服务规则和服务令牌功能的模块。用户访问资源需要验证用户的身份与权限，服务执行操作也需要进行权限检测，这些都需要通过 Keystone 来处理。</li>
+</ol>
+<h2 id="网络虚拟化">网络虚拟化</h2>
+<ol>
+<li>虚拟网络是指虚拟机和虚拟机、虚拟机和物理机之间的网络，这个网络需要承载在物理网络之上。</li>
+<li>虚拟终端是网络定义的一种统一的终端格式，它定义了统一的字符集、终端命令、格式控制符等等，和网络虚拟化没有关系。</li>
+<li>一个网络中最多只可以有4096个VLAN。</li>
+<li>OpenStack中，端口是指交换设备（物理/虚拟）上的一个接口。</li>
+<li>Libvirt是在KVM和虚拟机之间的一个中间层，不是KVM的一部分。</li>
+</ol>
+<h2 id="c4_ep2">C4_EP2</h2>
+<ol>
+<li>负载均衡请求不均衡可能有以下几种原因:1.ECS实例请求连接数较少。2. 不同ECS实例的性能不同导致请求不均衡。3. 开启了会话保持功能。4.ECS健康检查异常。5. TCP Keepalive 保持长连接。</li>
+<li>使用阿里云的负载均衡SLB实例时，合理的会话保持配置可以实现与某个连接(Session)相关的所有应用请求能够由同一台后端云服务器ECS实例进行处理，维持业务的延续性。四层服务的会话保持是基于_________实现的。
+<ul>
+<li>四层服务的会话保持是基于源IP实现的，七层服务的会话保持是基于 Cookie 实现的。</li>
+</ul>
+</li>
+<li>在阿里云专有网络VPC创建后，路由器也是随着VPC一起自动创建的，所以不需要手动创建了。这个 时候需要继续创建交换机才能在交换机中创建其他云产品。</li>
+<li>流量转发四层是通过LVS实现，七层是通过 Tengine 实现</li>
+<li>在负载均衡SLB中，可以通过 X-Forwarded-For 的方式获取访问者真实IP</li>
+<li>实现不同地域的多个负载均衡SLB的负载，需要通过DNS轮询来实现</li>
+<li>负载均衡只支持 PEM 格式的证书。</li>
+<li>一个负载均衡实例最多支持添加 50个监听，每个监听配置对应后端ECS实例上的一个应用。您可以通过对后端ECS实例上的多个应用配置不同主机头的方式来满足这一需求
+<ul>
+<li>(企业购买了一个负载均衡SLB实例，该实例下挂载了多台云服务器ECS实例，每个ECS实例上都部署了多个不同的站点，并使用不同域名访问。现在负载均衡SLB实例可以通过配置 _主机头____来实现对同一台ECS实 例上不同站点的健康检查。)</li>
+</ul>
+</li>
+<li>当用户流量经过负载均衡某端口时，我们首先判断其是否能够匹配  上某条“转发规则”，如果匹配，则将流量转发到该规则的后端服务器组上;若不匹配并且在该监听上设置了虚  拟服务器组，那么将流量转发到该虚拟服务器组上;若用户没有在该监听上设置虚拟服务器组，即将流量转发 到实例级别添加的各后端服务器中。</li>
+<li>使用阿里云的负载均衡SLB实例时，可以通过健康检查来判断后端云服务器ECS实例的可用性。针对 7 层服 务(HTTP协议)，负载均衡SLB实例通过____来判断云服务器ECS实例是否可用。
+<ul>
+<li>四层是检查端口，七层是检查服务器端返回的状态码。</li>
+</ul>
+</li>
+<li>打通您的VPC与传统数据中心，所以需要基于公网的 VPN 或者专线。</li>
+</ol>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="传统网络">传统网络</h1>
+<h2 id="物理层">物理层</h2>
+<h2 id="数据链路层">数据链路层</h2>
+<ol>
+<li>ARP的请求报文是广播报文，应答报文是一对一的（单播）。</li>
+<li>封装ARP报文的以太网帧类型字段应为：0x0806。</li>
+</ol>
+<h2 id="网络层">网络层</h2>
+<ol>
+<li>RIPv2报文为组播报文，组播地址为224.0.0.9。</li>
+<li>能隔离广播域的网元设备是路由器。</li>
+</ol>
+<h2 id="运输层">运输层</h2>
+<ol>
+<li>TCP协议保证所传送的信息是正确的，IP协议负责信息的实际传送。</li>
+<li>UDP报文头部的字段包括：源端口号、目标端口号、数据报长度和校验值。</li>
+</ol>
+<h2 id="应用层">应用层</h2>
+<ol>
+<li>
+<p>FTP服务一般运行在20和21两个端口。端口<strong>20</strong>用于在客户端和服务器之间<strong>传输数据流</strong>，而端口<strong>21</strong>用于<strong>传输控制流</strong>，并且是命令通向ftp服务器的进口。</p>
+</li>
+<li>
+<p>TFTP协议是基于UDP协议的。它的端口号是<strong>69</strong>。</p>
+</li>
+<li>
+<p>RIP协议是用UDP协议来封装的。</p>
+</li>
+<li>
+<p><strong>DNS</strong>默认端口号为<strong>53</strong>。</p>
+</li>
+</ol>
+<h1 id="云网络">云网络</h1>
+<h2 id="sdn">SDN</h2>
+<ol>
+<li>
+<p>OpoenDaylight使用Java编写</p>
+</li>
+<li>
+<p>Scapy使用Python编写</p>
+</li>
+<li>
+<p>ONOS与 OpenDaylight是SDN模型中的控制器。</p>
+</li>
+<li>
+<p>SDN交换机基于流表实现转发。</p>
+</li>
+<li>
+<p>OpenFlow协议是基于TCP协议</p>
+</li>
+<li>
+<p>ONOS的核心功能包括分布式核心平台、北向接口抽象层/APIs、南向接口抽象层/APIs、软件模块化。</p>
+</li>
+<li>
+<p><strong>OVSDB协议</strong>对应的侦听端口是<strong>6640</strong>.</p>
+</li>
+<li>
+<p>当<strong>iPerf</strong>不指定-p时，服务器端使用的或客户端所连接的默认端口是<strong>5001</strong>。</p>
+</li>
+<li>
+<p>sFlow Collector安装启动后的默认监听端口是<strong>6343</strong>。</p>
+</li>
+<li>
+<p>OpenDaylight默认启动的监听端口号是<strong>6633</strong>。</p>
+</li>
+<li>
+<p>Netperf默认使用TCP传输层协议。</p>
+</li>
+<li>
+<p>通过Hello消息协商双方的OpenFlow版本号。</p>
+</li>
+<li>
+<p>组类型：指定组的动作，分为all、select、indirect、fast failover四种。</p>
+</li>
+<li>
+<p>OpenFlow交换机由流表、安全通道和OpenFlow协议三部分组成。</p>
+</li>
+<li>
+<p>OpenFlow网络由OpenFlow交换机、网络虚拟化层和控制器三部分组成。</p>
+</li>
+<li>
+<p>在OpenFlow v1.3流表处理过程中，多个flow tables是依次排列的，序号从0开始。</p>
+</li>
+<li>
+<p>OF1.3协议中的交换机含有多个流表，每个流表中含有多个流表项，每个流表项包含多个匹配项及对应的指令。</p>
+</li>
+<li>
+<p><strong>idle_time</strong>和<strong>hard_time</strong>给出了该流表项的生存时间，其中idle_time表示当这条流表项在这段时间内没有匹配到数据分组，则该流表项失效，hard_time表示自流表项下发后只要过了这段时间即刻失效；两者同时设置时，以先到的生存时间为准；两者同时为0时，流表项不会自动失效。</p>
+</li>
+<li>
+<p>流表由很多个流表项组成，每个流表项就是一个转发规则。</p>
+</li>
+<li>
+<p>流表项由3个基本要素组成：<strong>头字段、计数器和行动。</strong></p>
+</li>
+<li>
+<p>利用CAR进行流量控制的处理：</p>
+<ul>
+<li>根据预先设置的匹配规则来对报文进行分类，如果是没有规定流量特性的报文，就直接继续发送，并不需要经过令牌桶的处理。</li>
+</ul>
+</li>
+<li>
+<p>ovs-vsctl list sflow可以查看已经配置的 sFlow Agent信息。</p>
+</li>
+<li>
+<p>odl-netconf-connector-all不是安装L2Switch项目必需的组件。</p>
+</li>
+<li>
+<p>PCEP使用TCP传输机制，TCP端口号为<strong>4189</strong></p>
+</li>
+<li>
+<p>单点对单点的intents：在外部路由器和SDN BGP  Speakers之间建立BGP对等会话使用单向intents。每个intents在SDN网络中连接两个连接点。每个连接点包含以下信息：SDN交换机的DPID、交换机Port和连接的BGP Speaker路由器的MAC地址。</p>
+</li>
+<li>
+<p>Ganglia监控工具监控粒度为1分钟。</p>
+</li>
+<li>
+<p>QoS是网络的一种安全机制，是用来解决网络延迟和阻塞等问题的一种技术。</p>
+</li>
+<li>
+<p>当IPv4被作为GRE有效载荷传输时，<strong>协议类型字段</strong>被设置为<strong>0x0800</strong>。</p>
+</li>
+<li>
+<p><strong>Scapy</strong>的命令：</p>
+<ul>
+<li>lsc()：查看scapy支持的所有的命令。</li>
+<li>send：在第三层即网络层发送数据包，但没有接收功能。</li>
+<li>sendp：在第二层即数据链路层发送数据包，同样没有接收功能。</li>
+</ul>
+</li>
+<li>
+<p>L2 Switch项目包含的服务包括地址跟踪、ARP处理器、主机跟踪、消除环路、包处理以及流表下发（主服务）等。</p>
+</li>
+<li>
+<p>OpenFlow流表的包头域，用于对交换机接收到的数据包的包头内容进行匹配。流表的包头域中包括了12个元组，不包括out_port。</p>
+</li>
+<li>
+<p>可以通过Packet-in/Packet-out发现交换机之间的链路</p>
+</li>
+<li>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210424170820.png" alt="img" loading="lazy"></figure>
+<ul>
+<li>SDN控制器构造PacketOut消息向S3的所有端口分别发送LLDP数据包。</li>
+<li>控制器向交换机S3中下发流表，流表规则为：将从Controller端口收到的LLDP数据包从他的对应端口发送出去。</li>
+<li>控制器向交换机S4中下发流表，流表规则为：将从非Controller接收到LLDP数据包发送给控制器。</li>
+<li>通过以上三步，控制器只能发现h1与h2之间的单向链路。\</li>
+</ul>
+</li>
+<li>
+<p>OpenDaylight采用了MD-SAL作为控制器平台服务层和南向接口及协议插件层的中间适配层，以实现北向接口与南向接口的解耦，保证南北向接口独立发展，互不影响。</p>
+</li>
+<li>
+<p>OVSDB子项目主要包含Northbound模块、Plugin模块和OVSDB  Library模块，其中北向Northbound模块可供外部APP调用，Plugin模块主要包含api、impl、internal和error等程序包，其中api程序包主要提供OVSDB的连接、增删改查等服务，impl包中的类是其接口的实现。南向OVSDB Library通过OVSDB协议与外部通信，进行OVSDB的管理。</p>
+</li>
+<li>
+<p>VXLAN网络理论上支持多达16M（即：2^24-1）的租户隔离。</p>
+</li>
+<li>
+<p>OpenFlow主要有3种类型的消息，分别是Controller-to-Switch、Asynchronous（异步）和Symmetric（对称）</p>
+<ul>
+<li>Controller-to-Switch包括Features 、Configuration 、Modify-State 、Read-Stats 、Send-Packet和Barrier</li>
+<li>异步包括Error 、Packet-in 、Flow-Removed和Port-Status</li>
+<li>对称包括Hello 、Echo 和Vendor</li>
+</ul>
+</li>
+<li>
+<p>斯坦福大学的Nick McKeown教授和Scott Shenker教授以及Martin Casado博士在硅谷一起创办了Nicira Networks公司，这是SDN历史上第一个初创公司，也是SDN从学术圈走向工业界的标志。</p>
+</li>
+<li>
+<p>P4协议支持可编程数据平面。OPenFlow协议不支持</p>
+</li>
+<li>
+<p>addLink()语法可以设置带宽bw、延迟delay、最大队列的大小max_queue_size、损耗率loss。addHost()语法可以对主机CPU以百分数的形式进行设置。</p>
+</li>
+<li>
+<p>Mininet中--switch参数默认使用ovsk交换机。</p>
+</li>
+<li>
+<p>OpenFlow（OF）被认为是第一个软件定义网络（SDN）标准。它最初在SDN环境中定义了通信协议，使SDN控制器能够与物理和虚拟的交换机和路由器等网络设备的转发平面直接进行交互，从而更好地适应不断变化的业务需求。</p>
+</li>
+<li>
+<p>Pipeline是OpenFlow交换机中实现matcing、forwarding和packet修改的flow table流水线。</p>
+</li>
+<li>
+<p>计量表项由计量表项ID、计量带、计数器三个要素构成。</p>
+</li>
+<li>
+<p>OpenFlow交换机定义了三种类型的OpenFlow Ports：physical ports（物理端口）、logical ports（逻辑端口）和reserved ports（预留端口），统称为标准端口。</p>
+</li>
+<li>
+<p>P4的目标是成为协议无关性（Protocol Independent）、目标无关性（Target Independent）、现场可重配置（Field Reconfigurable）的语言。</p>
+</li>
+<li>
+<p>在AD-SAL中，南北向API是1：1的对应关系，同一API无法被复用。所有南北向Plugin的功能都需要定义相应的AD-SAL API来承载，造成AD-SAL模块会更加庞大、实现更为复杂、维护困难性增加。</p>
+</li>
+<li>
+<p>L2Switch项目包含以下几个部分：Packet Handler 、Loop Remover 、Arp Handler 、Address Tracker、Host Tracker、L2 Switch Main</p>
+</li>
+<li>
+<p>NETCONF中定义了三种消息类型，分别是hello， rpc和rpc-reply, notification。</p>
+</li>
+</ol>
+<h2 id="云网络-2">云网络</h2>
+<ol>
+<li>Linux的磁盘分区包括主分区、逻辑分区、扩展分区和交换分区。</li>
+</ol>
+<h2 id="云存储">云存储</h2>
+<ol>
+<li>
+<p>Bigtable由客户端程序库、一个主服务器和多个子表服务器组成。</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/LZ-00/picgo/img/20210425122417.png" alt="Bigtable架构图" loading="lazy"></figure>
+</li>
+<li></li>
+</ol>
+<h2 id="云平台">云平台</h2>
+<ol>
+<li>OpenStack高可用架构通常有3个控制节点。</li>
+<li>Keystone是 OpenStack 框架中负责管理身份验证、服务规则和服务令牌功能的模块。用户访问资源需要验证用户的身份与权限，服务执行操作也需要进行权限检测，这些都需要通过 Keystone 来处理。</li>
+</ol>
+<h2 id="网络虚拟化">网络虚拟化</h2>
+<ol>
+<li>虚拟网络是指虚拟机和虚拟机、虚拟机和物理机之间的网络，这个网络需要承载在物理网络之上。</li>
+<li>虚拟终端是网络定义的一种统一的终端格式，它定义了统一的字符集、终端命令、格式控制符等等，和网络虚拟化没有关系。</li>
+<li>一个网络中最多只可以有4096个VLAN。</li>
+<li>OpenStack中，端口是指交换设备（物理/虚拟）上的一个接口。</li>
+<li>Libvirt是在KVM和虚拟机之间的一个中间层，不是KVM的一部分。</li>
+</ol>
+<h2 id="c4_ep2">C4_EP2</h2>
+<ol>
+<li>负载均衡请求不均衡可能有以下几种原因:1.ECS实例请求连接数较少。2. 不同ECS实例的性能不同导致请求不均衡。3. 开启了会话保持功能。4.ECS健康检查异常。5. TCP Keepalive 保持长连接。</li>
+<li>使用阿里云的负载均衡SLB实例时，合理的会话保持配置可以实现与某个连接(Session)相关的所有应用请求能够由同一台后端云服务器ECS实例进行处理，维持业务的延续性。四层服务的会话保持是基于_________实现的。
+<ul>
+<li>四层服务的会话保持是基于源IP实现的，七层服务的会话保持是基于 Cookie 实现的。</li>
+</ul>
+</li>
+<li>在阿里云专有网络VPC创建后，路由器也是随着VPC一起自动创建的，所以不需要手动创建了。这个 时候需要继续创建交换机才能在交换机中创建其他云产品。</li>
+<li>流量转发四层是通过LVS实现，七层是通过 Tengine 实现</li>
+<li>在负载均衡SLB中，可以通过 X-Forwarded-For 的方式获取访问者真实IP</li>
+<li>实现不同地域的多个负载均衡SLB的负载，需要通过DNS轮询来实现</li>
+<li>负载均衡只支持 PEM 格式的证书。</li>
+<li>一个负载均衡实例最多支持添加 50个监听，每个监听配置对应后端ECS实例上的一个应用。您可以通过对后端ECS实例上的多个应用配置不同主机头的方式来满足这一需求
+<ul>
+<li>(企业购买了一个负载均衡SLB实例，该实例下挂载了多台云服务器ECS实例，每个ECS实例上都部署了多个不同的站点，并使用不同域名访问。现在负载均衡SLB实例可以通过配置 _主机头____来实现对同一台ECS实 例上不同站点的健康检查。)</li>
+</ul>
+</li>
+<li>当用户流量经过负载均衡某端口时，我们首先判断其是否能够匹配  上某条“转发规则”，如果匹配，则将流量转发到该规则的后端服务器组上;若不匹配并且在该监听上设置了虚  拟服务器组，那么将流量转发到该虚拟服务器组上;若用户没有在该监听上设置虚拟服务器组，即将流量转发 到实例级别添加的各后端服务器中。</li>
+<li>使用阿里云的负载均衡SLB实例时，可以通过健康检查来判断后端云服务器ECS实例的可用性。针对 7 层服 务(HTTP协议)，负载均衡SLB实例通过____来判断云服务器ECS实例是否可用。
+<ul>
+<li>四层是检查端口，七层是检查服务器端返回的状态码。</li>
+</ul>
+</li>
+<li>打通您的VPC与传统数据中心，所以需要基于公网的 VPN 或者专线。</li>
+</ol>
+<!-- more -->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[rabbitmq]]></title>
         <id>https://lz-00.github.io/blog/post/rabbitmq/</id>
